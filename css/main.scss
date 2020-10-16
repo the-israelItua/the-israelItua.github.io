@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: fixed !important;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: black;
+  color: blanchedalmond;
+  z-index: 1000;
+  a {
+    color: blanchedalmond;
+    font-family: cursive, "Times New Roman", Times, serif;
+  }
+  #openIcon {
+    position: absolute;
+    right: 4%;
+    font-size: 1.6rem;
+  }
+  #closeIcon {
+    position: absolute;
+    right: 4%;
+    font-size: 1.6rem;
+  }
+  .hide {
+    display: none;
+  }
+}
+.preload {
+  display: flex;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 1000;
+  .bar {
+    width: 40vw;
+    background: blanchedalmond;
+    margin-left: -1rem;
+  }
+  .text {
+    position: absolute;
+    color: black;
+    z-index: 1400;
+    top: 40%;
+    left: 10%;
+  }
+}
+#sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 80vw;
+  z-index: 200;
+  background: blanchedalmond;
+  transition: all 3s linear;
+  a {
+    margin: 1rem 0;
+    color: black;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+    text-decoration: underline;
+  }
+}
+.hide {
+  left: -1500px;
+}
+.show {
+  left: 0;
+}
+.intro {
+  padding-top: 3rem;
+  background: black;
+  .view_one {
+    padding: 10rem;
+    min-height: 100vh;
+    color: blanchedalmond;
+    font-size: 1.3rem;
+    h2 {
+      margin: 1rem 0;
+    }
+    button {
+      margin: 2rem 0;
+      color: blanchedalmond;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 1rem;
+    }
+  }
+}
+#stack {
+  background: black;
+  .view_two {
+    background: rgba(36, 33, 33, 0.1);
+    padding: 10rem;
+    color: blanchedalmond;
+    font-size: 1.3rem;
+    ul {
+      margin: 30px 0 20px 50px;
+      position: relative;
+      border-left: 1px solid blanchedalmond;
+      li {
+        list-style: none;
+        padding: 20px;
+        padding-left: 20px;
+      }
+    }
+    ul::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      left: 40px;
+      top: 0;
+      list-style: none;
+      background: red;
+      margin-top: 20px;
+    }
+    li::before {
+      content: "";
+      position: absolute;
+      background: black;
+      width: 20px;
+      height: 20px;
+      left: -1px;
+      margin-top: 5px;
+      transform: translateX(-50%);
+      border-radius: 50px;
+      border: 4px solid blanchedalmond;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 1rem;
+    }
+  }
+}
+#projects {
+  background: black;
+  .view_three {
+    background-color: black;
+    min-height: 100vh;
+    color: blanchedalmond;
+    h2 {
+      margin: 0 1rem;
+    }
+    button {
+      margin: 2rem 0;
+      color: blanchedalmond;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 1rem;
+    }
+    .card {
+      border: 1px solid grey !important;
+      background-color: black !important;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      .carousel-item {
+        background: black;
+        padding: 20px 0 50px;
+      }
+    }
+    .card-body {
+      border: 1px solid black;
+      color: blanchedalmond;
+      font-size: 1.3rem;
+      .btn {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#blog {
+  background: black;
+  color: whitesmoke;
+  .view_four {
+    padding: 10rem;
+    color: blanchedalmond;
+    font-size: 1.3rem;
+    h2 {
+      margin: 3rem 0 1rem;
+    }
+    button {
+      margin: 2rem 0;
+      color: blanchedalmond;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+button {
+  background-color: rgba(36, 33, 33, 0.1);
+  padding: 1rem 2rem;
+  color: whitesmoke;
+}
+#footer {
+  background: black;
+  color: blanchedalmond;
+  font-weight: 800;
+  padding: 3rem 3rem 1rem;
+  .col-md-3 {
+    font-size: 1.3rem;
+    border: 1px solid blanchedalmond;
+    border-left: 4px solid blanchedalmond;
+    padding: 1rem;
+  }
+  a {
+    color: blanchedalmond;
+    margin: 1rem 0;
+  }
+  h2 {
+    margin: 2rem 0;
+  }
+  h6 {
+    margin: 1rem 0;
+  }
+  .foot {
+    margin-top: 3rem;
+    font-size: 0.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .intro {
+    .view_one {
+      padding: 3rem 1.9rem;
+    }
+  }
+  #stack {
+    .view_two {
+      padding: 5rem 1.9rem;
+    }
+  }
+  #projects {
+    .view_three {
+      padding: 5rem 1.9rem;
+    }
+  }
+  #blog {
+    .view_four {
+      padding: 5rem 1.9rem;
+    }
+  }
+}
